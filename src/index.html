@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Fundación Soy Cuerpo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  </head>
+  <body>
+    <div id="container" class="hide">
+      <img
+        class="fadein"
+        src="assets/logo_cropped_600x600.png"
+        alt="Logo Fundación Soy Cuerpo"
+      />
+      <!-- <h1 class="hidden">Fundación<br />Soy Cuerpo</h1> -->
+      <h3 class="fadein">Pronto...</h3>
+    </div>
+    <script>
+      (function() {
+        const h1 = document.getElementsByTagName('h1')[0];
+        const h3 = document.getElementsByTagName('h3')[0];
+        const img = document.getElementsByTagName('img')[0];
+        const container = document.getElementById('container');
+
+        window.onload = function() {
+          container.className += ' loaded';
+        };
+        // // this will run when the image is ready
+        var interval = setInterval(function() {
+          if (img.complete) {
+            img.className += ' ready';
+            setTimeout(() => {
+              h1.className += ' ready';
+            }, 1000);
+
+            setTimeout(() => {
+              h3.className += ' ready';
+            }, 2000);
+
+            clearInterval(interval);
+          }
+        }, 100);
+      })();
+    </script>
+  </body>
+</html>

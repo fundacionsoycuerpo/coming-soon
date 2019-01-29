@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "name": "fundacionsoycuerpo",
+  "builds": [
+    { "src": "src/*.*", "use": "@now/html-minifier" },
+    { "src": "src/assets/*.png", "use": "@now/optipng" }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "headers": { "cache-control": "s-maxage=1000" },
+      "dest": "src/index.html"
+    },
+    { "src": "/(.*)", "dest": "src/$1" }
+  ],
+  "alias": ["fundacionsoycuerpo.cl", "www.fundacionsoycuerpo.cl"]
+}
