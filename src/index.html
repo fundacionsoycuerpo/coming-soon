@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Fundación Soy Cuerpo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Fundación soy cuerpo es una organización sin fines de lucro, que nace como una respuesta concreta a la necesidad de poner en valor el cuerpo humano, potenciando el entendimiento integral de éste."
+    />
+    <title>Fundación Soy Cuerpo</title>
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   </head>
@@ -15,12 +19,10 @@
         src="assets/logo_cropped_600x600.png"
         alt="Logo Fundación Soy Cuerpo"
       />
-      <!-- <h1 class="hidden">Fundación<br />Soy Cuerpo</h1> -->
       <h3 class="fadein">Pronto...</h3>
     </div>
     <script>
       (function() {
-        const h1 = document.getElementsByTagName('h1')[0];
         const h3 = document.getElementsByTagName('h3')[0];
         const img = document.getElementsByTagName('img')[0];
         const container = document.getElementById('container');
@@ -32,13 +34,10 @@
         var interval = setInterval(function() {
           if (img.complete) {
             img.className += ' ready';
-            setTimeout(() => {
-              h1.className += ' ready';
-            }, 1000);
 
             setTimeout(() => {
               h3.className += ' ready';
-            }, 2000);
+            }, 1000);
 
             clearInterval(interval);
           }
